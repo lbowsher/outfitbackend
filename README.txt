@@ -9,6 +9,10 @@ Backend using SQL Alchemy creates 3 tables called users, outfits, and clothes.
 Implements 17 routes across 3 tables, including dealing with images in the tops and bottoms routes. 
 
 Uploaded to Heroku https://outfithackchallenge.herokuapp.com/api/bottoms/
+Please note that uploading images to heroku only works with png and jpeg images only, once they have been converted to base 64.
+We use https://www.base64-image.de/ as our image converter, then copy paste the text into our POST request body with the "image_name" key
+
+If this is not December 2021 the heroku and AWS accounts may be deactivated since this is for a school project.
 
 Tables:
 This is what each object will look like from their given table. The return type for all the routes will be a json object with these key: value pairs, or possibly a list of them.
@@ -62,7 +66,7 @@ Get /api/tops/
 Get /api/tops/id/
     Returns the one top object with id=id
 Post /api/tops/
-    Needs json input in request body: {“img”: image here}
+    Needs json input in request body: {“image_data”: "base 64 image here"}
     Returns the new bottom object created
 Delete /api/tops/id/
     Deletes the top with id=id
@@ -74,7 +78,7 @@ Get /api/bottoms/
 Get /api/bottoms/id/
     Returns the one bottom object with id=id
 Post /api/bottoms/
-    Needs json input in request body: {“img”: image here}
+    Needs json input in request body: {“image_data”: "base 64 image here"}
     Returns the new bottom object created
 Delete /api/bottoms/id/
     Deletes the bottom with id=id
