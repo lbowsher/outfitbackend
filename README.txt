@@ -6,6 +6,7 @@ outFIT Hack Challenge Final Submission
 Group no: 14
 
 Backend using SQL Alchemy creates 3 tables called users, outfits, and clothes. 
+Implements 17 routes across 3 tables, including dealing with images in the tops and bottoms routes. 
 
 Uploaded to Heroku https://outfithackchallenge.herokuapp.com/api/bottoms/
 
