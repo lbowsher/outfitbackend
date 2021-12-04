@@ -8,11 +8,13 @@ Group no: 14
 Backend using SQL Alchemy creates 3 tables called users, outfits, and clothes. 
 Implements 17 routes across 3 tables, including dealing with images in the tops and bottoms routes. 
 
-Uploaded to Heroku https://outfithackchallenge.herokuapp.com/api/bottoms/
+Synchronized upload of images to both AWS S3 Bucket and SQL database hosted on Heroku
+Heroku API link: https://outfithackchallenge.herokuapp.com/api/bottoms/
+
 Please note that uploading images to heroku only works with png and jpeg images only, once they have been converted to base 64.
 We use https://www.base64-image.de/ as our image converter, then copy paste the text into our POST request body with the "image_name" key
 
-If this is not December 2021 the heroku and AWS accounts may be deactivated since this is for a school project.
+If this is not December 2021 the heroku and AWS accounts may be deactivated to save costs since this is for a school side project.
 
 Tables:
 This is what each object will look like from their given table. The return type for all the routes will be a json object with these key: value pairs, or possibly a list of them.
